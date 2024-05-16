@@ -1,0 +1,33 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.dashboard {
+    background-color: v.$gris;
+    width: 100%;
+    text-align: center;
+    @include m.tablet {
+        position: fixed;
+        display: flex;
+        height: 100vh;
+    }
+
+    .principal {
+        flex: 1;
+        overflow-y: auto;
+    }
+}
+
+.menu {
+    text-align: center;
+    align-items: center;
+}
+
+.menu-regresar{
+    padding: 0 4rem;
+    width: 30rem;
+    @include m.telefono {
+        padding: 0;
+        width: 20rem;
+    }
+}
+

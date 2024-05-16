@@ -1,0 +1,47 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenedor-form {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    margin: 1rem;
+        padding: 0;
+        width: auto;
+    @include m.tablet {
+        margin: 0 10rem 0 10rem;
+        padding: 1rem 15rem ; 
+    }
+    
+
+    .formulario {
+        
+        .campo {
+            justify-content: space-between;
+
+            label{
+                font-weight: 600;
+                @include m.tablet {
+                    flex: 0 0 20rem; // El tamaño base del label es de 20rem, los 0 quieren decir que no puede crecer ni encogerse, si tuviera 1, todos crecen para llenar el espacio
+                }
+                
+                @include m.telefono {
+                    flex: 0 0 10rem;
+                }
+            }
+        
+            input, select {
+                flex: initial;
+                width: 60%;
+            }
+        }
+        
+        .opciones {
+            margin: 0 15rem;
+            @include m.telefono {
+                margin: 0;
+            }
+        }
+    }
+}

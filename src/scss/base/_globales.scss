@@ -1,0 +1,28 @@
+@use 'variables' as v;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box; // Evita que se vaya agrandando el tamaño de los contenedores, por ejemplo, sin esta propiedad al estar en un formulario, si el contenedor del formulario mide 100 x 100, este seria afectado cuando cambiemos margin, padding, etc, porque aumentaria esos tamaños
+    height: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: v.$fuente_principal;
+    font-size: 1.6rem;
+    height: 100vh;
+}
+.contenedor {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}

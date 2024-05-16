@@ -1,0 +1,44 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.formulario {
+    width: 100%;
+    align-items: center;
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+    align-items: center;
+    text-align: left;
+    label { //
+        flex: 0 0 10rem; // El tamaño base del label es de 10rem, los 0 quieren decir que no puede crecer ni encogerse mas alla d su tamaño base, si tuviera 1, todos crecen para llenar el espacio
+        padding: 1rem;
+    }
+
+    input, select{
+        text-align: center;
+        width: 100%;
+        flex: 1; // crece para llenar espacio
+        border: 1px solid v.$azul;
+        padding: calc(v.$separacion / 4);
+        border-radius: 1rem;
+    }
+    
+}
+
+.boton {
+    @include m.boton(v.$azul, v.$blanco);
+    border-radius: 1.5rem;
+}
+
+.olvide a{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: v.$negro;
+
+    &:hover {
+        color: v.$azul;
+    }
+}
+

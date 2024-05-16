@@ -1,0 +1,42 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.fichas-usuarios{
+    padding-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    @include m.tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .ficha {
+        width: 35rem;
+        margin: 3rem;
+        padding: 2rem;
+        background-color: v.$blanco;
+        border-radius: 1rem;
+        border: v.$azul-medio 2px solid;
+        align-items: center;
+        text-align: center;
+
+        h4 {
+            text-transform: uppercase;
+            font-size: 2.6rem;
+        }
+        
+        .imagen {
+            width: 20rem;
+            height: auto;
+            padding: 0 2rem 2rem 2rem;
+
+            img{
+                width: 20rem;
+            }
+        }
+
+        
+    }
+}

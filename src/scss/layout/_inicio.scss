@@ -1,0 +1,58 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+.inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Altura mínima del viewport */
+    height: 100%;
+    margin: 1rem 5rem 2rem 5rem;
+
+}
+.titulo {
+    color: v.$azul;
+    font-size: 4.8rem;
+    text-shadow: 1px 2px 2px v.$negro;
+
+    span{
+        padding: 1rem;
+        font-size: 3.4rem;
+    }
+}
+
+.contenedor-inicio{
+    border-radius: 1rem;
+    border: 2px solid v.$azul-claro;
+    text-align: center;
+    height: auto;
+    width: 45rem;
+    margin: 2rem;
+    padding: 3rem;
+}
+
+@include m.tablet {
+    .contenedor-inicio {
+        width: 60rem;
+    }
+}
+
+
+.opciones {
+    display: flex;
+    flex-direction: column;
+}
+
+.boton {
+    @include m.boton(v.$azul, v.$blanco);
+    border-radius: 1.5rem;
+}
+
+.ir-inicio a{
+    color: v.$negro;
+}
+.acciones {
+    width: 100%;
+}

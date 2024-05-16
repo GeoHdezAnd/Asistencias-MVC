@@ -1,0 +1,38 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.barra {
+
+    background-color: v.$blanco;
+    padding: 1rem 2rem;
+    box-shadow: 1px 12px 9px -13px v.$negro;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    
+    span {
+        color: v.$azul;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-style: italic;
+    }
+
+    a {
+        color: v.$negro;
+    }
+
+    .cerrar-sesion {
+        @include m.boton( v.$azul, v.$blanco);
+        font-size: 1.4rem;
+        font-weight: 400;
+        @include m.telefono {
+            padding: 1;
+            width: 12rem;
+        }
+        @include m.tablet {
+            width: 20rem;
+        }
+    }
+}

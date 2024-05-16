@@ -1,0 +1,108 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.admin {
+    padding: 1rem 2rem 3rem 2rem;
+    margin: 0 3rem 2rem 3rem;
+    
+
+    
+    .registro{
+        background-color: v.$blanco;
+        width: auto;
+        height: auto;
+        padding: 1rem 3rem;
+        border: v.$azul 2px solid;
+        box-shadow: -4px 12px 9px -5px v.$negro;
+        @include m.telefono {
+            overflow-x: auto;
+        }
+        
+        .acciones-registro {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            
+            .boton-registro {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                text-align: center;
+                
+                @include m.telefono {
+                    width: 15rem;
+                }
+                img {
+                    width: 3rem;
+                    @include m.telefono {
+                        width: 2rem;
+                    }
+                }
+            }
+
+            .buscador {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                .buscador-input {
+                    margin: 0 2rem 0 1.5rem;
+                    height: 3.5rem;
+                    width: 40rem;
+                    border-radius: 1rem;
+                    padding: 1rem;
+                    border: v.$black 3px solid;
+
+                    @include m.telefono {
+                        width: 25rem;
+                    }
+                }
+
+                
+            }
+        }
+
+    }
+
+    .tabla {
+        margin: 1rem 0 1rem 0;
+        border: v.$gris 1px solid;
+        width: 100%;
+
+        .encabezado {
+            height: 4rem;
+            font-size: 1.8rem;
+            background: v.$gris;
+            text-transform: uppercase;
+            th {
+                font-weight: bold;
+            }
+        }
+
+        th {
+            height: 4rem;
+            margin: 1rem;
+            font-weight: 200;
+        }
+        .operaciones{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center; 
+            button {
+                border: 0px;
+                background-color: v.$blanco
+            }
+            a{
+                color: v.$blanco;
+                padding: 2rem;
+                .editar {
+                    background-color: v.$azul;
+                    width: auto;
+                    color: v.$blanco;
+                }
+            }
+            
+        }
+        
+    }
+}
